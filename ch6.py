@@ -9,8 +9,8 @@ def getb(n):
         for i in range(3, b):
             if (b%i ==0 and n%i ==0):
                 flag = False
-                continue
-        return b
+                break
+    return b
 
 low = pow(2, 12) - pow(2, 5) - 1
 high = pow(2, 12) + pow(2, 5) + 1
@@ -22,6 +22,5 @@ for n in range(low, high, 2):
         if(r != 0):
             break
         count = count - 1
-        if (count == 0):
-            break
+
 print(n)
